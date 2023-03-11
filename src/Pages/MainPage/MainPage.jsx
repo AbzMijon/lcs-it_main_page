@@ -43,30 +43,32 @@ function MainPage() {
                 <p className='main__scroll-text'>scroll down <AiOutlineArrowDown className='main__scroll-icon' /></p>
             </main>
             <footer className='footer'>
-                <div className="footer__logo">
-                    <img src={logo} alt="" className='footer__logo-img' />
-                    <p className='footer__logo-name'>LCS-IT</p>
-                </div>
-                <div className="footer__adress">
-                    <p className='footer__adress-title'>Adress</p>
-                    <ul className='footer__adress-list'>
-                        <li className='footer__adress-item'>1 Knightsbridge Green London SW1X 7NE United Kingdom</li>
-                        <li className='footer__adress-item'>info@lcs-it.com</li>
-                        <li className='footer__adress-item'>+44(0)2070 528 406</li>
-                    </ul>
-                </div>
-                <div className="footer__about">
-                    <p className='footer__about-title'>About</p>
-                    <ul className="footer__about-list">
-                        <li className='footer__about-item'>Contacts</li>
-                        <li className='footer__about-item'>Company</li>
-                        <li className='footer__about-item'>Outsourcing</li>
-                        <li className='footer__about-item'>Services</li>
-                    </ul>
-                </div>
-                <div className="footer__folow">
-                    <p className='footer__folow-title'>Follow Us</p>
-                    <ul className='footer__folow-list'></ul>
+                <div className="footer__content">
+                    <div className="footer__logo">
+                        <img src={logo} alt="" className='footer__logo-img' />
+                        <p className='footer__logo-name'>LCS-IT</p>
+                    </div>
+                    <div className="footer__adress">
+                        <p className='footer__adress-title'>Adress</p>
+                        <ul className='footer__adress-list'>
+                            <li className='footer__adress-item'>1 Knightsbridge Green London SW1X 7NE United Kingdom</li>
+                            <li className='footer__adress-item'>info@lcs-it.com</li>
+                            <li className='footer__adress-item'>+44(0)2070 528 406</li>
+                        </ul>
+                    </div>
+                    <div className="footer__about">
+                        <p className='footer__about-title'>About</p>
+                        <ul className="footer__about-list">
+                            <li className='footer__about-item'>Contacts</li>
+                            <li className='footer__about-item'>Company</li>
+                            <li className='footer__about-item'>Outsourcing</li>
+                            <li className='footer__about-item'>Services</li>
+                        </ul>
+                    </div>
+                    <div className="footer__folow">
+                        <p className='footer__folow-title'>Follow Us</p>
+                        <ul className='footer__folow-list'></ul>
+                    </div>
                 </div>
             </footer>
         </React.Fragment>

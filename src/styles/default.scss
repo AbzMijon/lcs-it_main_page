@@ -27,7 +27,7 @@ img {
 }
 
 body {
-	background-color: #ffffff;
+	background-color: #000;
 	background-size: cover;
 
 	font-family: 'poppinsRegular', sans-serif;
@@ -37,13 +37,6 @@ body {
 	line-height: 135%;
 	letter-spacing: -0.01em;
 	color: #9E9EAC;
-
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	position: absolute;
-	width: 100vw;
-	height: 100vh;
 }
 
 h1,
@@ -86,7 +79,7 @@ h5,
 	letter-spacing: -0.01em;
 }
 
-.btn_contact {
+.btn-contact {
 	width: 312px;
 	height: 50px;
 	background-color: #2A2B3A;

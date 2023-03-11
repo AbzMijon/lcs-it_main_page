@@ -1,7 +1,7 @@
 import React from 'react';
 import { Routes, Route, Navigate } from 'react-router-dom';
 import { ROUTES } from './routes';
-import MainPage from '../Pages/MainPage';
+import MainPage from '../Pages/MainPage/MainPage';
 
 function RootRoute() {
     return (

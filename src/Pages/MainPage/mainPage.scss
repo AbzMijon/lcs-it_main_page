@@ -1,0 +1,133 @@
+.header {
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    padding: 23px 140px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 10;
+    .header__logo {
+        display: flex;
+        justify-content: start;
+        align-items: center;
+        cursor: pointer;
+        .header__logo-img {
+            margin-right: 13px;
+            width: 30px;
+            height: 27px;
+        }
+        .header__logo-name {
+            font-family: 'poppinsBold', sans-serif;
+            font-style: normal;
+            font-weight: 700;
+            font-size: 24px;
+            line-height: 135%;
+            text-align: center;
+            letter-spacing: 0.1em;
+            color: #FFFFFF;
+        }
+    }
+    .header__list {
+        display: flex;
+        justify-content: right;
+        align-items: center;
+        margin-right: 130px;
+        .header__list-item {
+            color: #fff;
+            margin-right: 70px;
+            transition: 0.1s all;
+            cursor: pointer;
+            &:hover {
+                color: #9747FF;
+            }
+        }
+    }
+}
+.main {
+    padding-top: 125px;
+    z-index: 3;
+    .main__bg {
+        position: absolute;
+        top: 0;
+        left: 0;
+    }
+    .welcome {
+        padding: 0px 10px;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        max-width: 1148px;
+        margin: 0 auto;
+        margin-bottom: 135px;
+        .welcome__info {
+            text-align: start;
+            padding-bottom: 20px;
+            margin-right: 137px;
+            align-self: flex-end;
+            z-index: 3;
+            .welcome__skills {
+                display: flex;
+                justify-content: start;
+                align-items: center;
+                margin-bottom: 40px;
+                .welcome__skills-item {
+                    background: #3C3D4C;
+                    border-radius: 100px;
+                    padding: 3px 20px;
+                    text-align: center;
+                    font-weight: 400;
+                    font-size: 12px;
+                    line-height: 18px;
+                    color: #fff;
+                    cursor: default;
+                    &:hover {
+                        background-color: #9747FF;
+                    }
+                }
+                .welcome__skills-item + .welcome__skills-item {
+                    margin-left: 32px;
+                }
+            }
+            .welcome__title {
+                margin-bottom: 40px;
+            }
+            .welcome__subtitle {
+                margin-bottom: 29px;
+            }
+        }
+        .welcome__cube {
+            z-index: 3;
+        }
+    }
+    .main__scroll-text {
+        width: 100%;
+        text-align: center; 
+        margin-right: 15px;
+    }
+    .main__scroll-icon {
+        font-size: 19px;
+    }
+}
+
+.footer {
+    z-index: 3;
+    max-width: 1148px;
+    margin: 0 auto;
+    border-top: 1px solid #3C3D4C;
+    background-color: #000;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    .footer__logo {
+        display: flex;
+        align-items: center;
+        .footer__logo-img {
+            margin-right: 13px;
+            filter: brightness(0) saturate(100%) invert(71%) sepia(8%) saturate(350%) hue-rotate(201deg) brightness(89%) contrast(87%);
+        }
+        .footer__logo-name {
+            color: #9E9EAC;
+        }
+    }
+}

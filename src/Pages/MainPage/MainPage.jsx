@@ -70,6 +70,9 @@ function MainPage() {
                         <ul className='footer__folow-list'></ul>
                     </div>
                 </div>
+                <div className="footer__container-down">
+                    <ul className="footer__terms-list"></ul>
+                </div>
             </footer>
         </React.Fragment>
     )

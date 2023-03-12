@@ -111,7 +111,6 @@
 }
 
 .footer {
-    z-index: 3;
     border-top: 1px solid #3C3D4C;
     background-color: #000;
     .footer__content {
@@ -120,20 +119,44 @@
         grid-template-columns: repeat(4, 1fr);
         max-width: 1148px;
         margin: 0 auto;
+        padding: 50px 0 60px 0;
         .footer__logo {
             display: flex;
             align-items: center;
+            transform: translateY(-20px);
             .footer__logo-img {
                 margin-right: 13px;
                 filter: brightness(0) saturate(100%) invert(71%) sepia(8%) saturate(350%) hue-rotate(201deg) brightness(89%) contrast(87%);
             }
             .footer__logo-name {
+                font-family: 'poppinsBold', sans-serif;
                 color: #9E9EAC;
+                font-weight: 700;
+                font-size: 24px;
+                line-height: 135%;
             }
         }
         .footer__adress-title, .footer__about-title, .footer__folow-title {
             font-family: 'poppinsBold', sans-serif;
             margin-bottom: 20px;
+            font-weight: 700;
+            font-size: 12px;
+            line-height: 135%;
         }
+        .footer__adress-list, .footer__about-list {
+            max-width: 170px;
+        }
+        .footer__adress-item, .footer__about-item, .footer__folow_item {
+            font-weight: 400;
+            font-size: 12px;
+            line-height: 135%;
+            margin-bottom: 15px;
+        }
+    }
+    .footer__container-down {
+        border-top: 1px solid #3C3D4C;
+        padding: 30px 0;
+        max-width: 1148px;
+        margin: 0 auto;
     }
 }

@@ -46,7 +46,6 @@
     }
 }
 .main {
-    padding-top: 125px;
     z-index: 3;
     .main__bg {
         position: absolute;
@@ -59,6 +58,7 @@
         grid-template-columns: repeat(2, 1fr);
         max-width: 1148px;
         margin: 0 auto;
+        margin-top: 260px;
         margin-bottom: 135px;
         .welcome__info {
             text-align: start;
@@ -97,7 +97,16 @@
             }
         }
         .welcome__cube {
+            position: relative;
             z-index: 3;
+            .cube {
+                width: 622px;
+                height: 550px;
+                position: absolute;
+                top: 0;
+                left: 0;
+                transform: translateY(-100px);
+            }
         }
     }
     .main__scroll-text {

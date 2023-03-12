@@ -37,7 +37,9 @@ function MainPage() {
                         <button className='welcome__btn btn-contact'>Contact Us</button>
                     </div>
                     <div className="welcome__cube">
-                        <img src={cube} alt="" />
+                        <div class="cube">
+                            <canvas id="canvas3d"></canvas>
+                        </div>
                     </div>
                 </section>
                 <p className='main__scroll-text'>scroll down <AiOutlineArrowDown className='main__scroll-icon' /></p>

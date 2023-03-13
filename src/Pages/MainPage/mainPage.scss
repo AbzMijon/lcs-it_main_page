@@ -1,3 +1,14 @@
+@mixin white-gradient {
+	background: linear-gradient(to right,  rgba(255,255,255,1) 0%,rgba(255,255,255,0) 100%);
+}
+
+$animationSpeed: 40s;
+
+@keyframes scroll {
+	0% { transform: translateX(0); }
+	100% { transform: translateX(calc(-250px * 1))}
+}
+
 .header {
     width: 100%;
     position: fixed;
@@ -113,9 +124,282 @@
         width: 100%;
         text-align: center; 
         margin-right: 15px;
+        margin-bottom: 30px;
     }
     .main__scroll-icon {
         font-size: 19px;
+    }
+    .experience {
+        margin-bottom: 85px;
+        .experience__block {
+            max-width: 1148px;
+            margin: 0 auto;
+            .experience__title {
+                margin-bottom: 55px;
+            }
+            .experience__list {
+                display: grid;
+                grid-template-columns: repeat(3, 1fr);
+                column-gap: 31px;
+                margin-bottom: 87px;
+                .experience__card {
+                    position: relative;
+                    height: 266px;
+                    background: linear-gradient(180deg, rgba(0, 0, 0, 0) 40.63%, #000000 81.25%);
+                    .experience__card-title {
+                        position: absolute;
+                        bottom: 24px;
+                        left: 50%;
+                        transform: translateX(-50%);
+                        color: #FFFFFF;
+                    }
+                    img {
+                        width: 100%;
+                        height: 100%;
+                    }
+                }
+            }
+            .experience__text {
+                text-align: start;
+                max-width: 860px;
+                margin: 0 auto;
+                margin-bottom: 89px;
+            }
+        }
+        .experience__swiper {
+            height: 100px;
+            margin: auto;
+            overflow:hidden;
+            position: relative;
+            width: 100%;
+            
+            &::before,
+            &::after {
+                content: "";
+                height: 100px;
+                position: absolute;
+                width: 200px;
+                z-index: 2;
+            }
+            
+            &::after {
+                right: 0;
+                top: 0;
+                transform: rotateZ(180deg);
+            }
+        
+            &::before {
+                left: 0;
+                top: 0;
+            }
+            .experience__skills {
+                animation: scroll $animationSpeed linear infinite;
+                display: flex;
+                .experience__skills-card {
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    .experience__skills-img {
+                        margin-right: 25px;
+                    }
+                    .experience__skills-name {
+    
+                    }
+                }
+                .experience__skills-card + .experience__skills-card {
+                    margin-left: 90px;
+                }
+            }
+        }
+    }
+    .outsourcing {
+        position: relative;
+        margin-bottom: 85px;
+        .outsourcing__bg1 {
+            position: absolute;
+            top: 50%;
+            left: -50px;
+            z-index: 3;
+        }
+        .outsourcing__bg2 {
+            position: absolute;
+            top: 10%;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+        .outsourcing__bg3 {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            right: 0;
+        }
+        .outsourcing__wrap {
+            max-width: 1148px;
+            margin: 0 auto;
+            .outsourcing__title {
+                margin-bottom: 54px;
+            }
+            .outsourcing__table {
+                display: grid;
+                grid-template-columns: repeat(3, 1fr);
+                grid-template-rows: repeat(3, 1fr);
+                gap: 30px;
+                .outsourcing__table-wrapper {
+                    position: relative;
+                    z-index: 10;
+                    .outsourcing__card {
+                        transition: 0.2s all;
+                        width: 100%;
+                        height: 100%;
+                        background: linear-gradient(140.55deg, rgba(42, 43, 58, 0.6) 1.17%, rgba(9, 11, 12, 0.6) 79.03%);
+                        border: 1px solid #3C3D4C;
+                        backdrop-filter: blur(2px);
+                        border-radius: 20px;
+                        padding: 40px 20px 30px 35px;
+                        display: flex;
+                        flex-direction: column;
+                        justify-content: space-evenly;
+                        align-items: start;
+                        position: relative;
+                        transform-style: preserve-3d;
+                        cursor: pointer;
+                        .outsourcing__img {
+                            margin-bottom: 20px;
+                            width: 50px;
+                            position: relative;
+                            transition: 0.2s;
+                        }
+                    }
+                    .outsourcing__card-btn {
+                        background: transparent;
+                        backdrop-filter: none;
+                        border: none;
+                        padding-bottom: 0;
+                        display: flex;
+                        flex-direction: row;
+                        align-items: end;
+                    }
+                }
+                span {
+                    width: 50%;
+                    height: 50%;
+                    position: absolute;
+                    z-index: 13333;
+                    &:first-child, &:nth-child(2) {
+                        top: 0;
+                    }
+                    &:first-child, &:nth-child(3) {
+                        left: 0;
+                    }
+                    &:nth-child(2), &:nth-child(4) {
+                        right: 0;
+                    }
+                    &:nth-child(3), &:nth-child(4) {
+                        bottom: 0;
+                    }
+
+                    &:first-child:hover ~ .outsourcing__card {
+                        transform: perspective(600px) rotateX(10deg) rotateY(-10deg);
+                    }
+                    &:nth-child(2):hover ~ .outsourcing__card {
+                        transform: perspective(600px) rotateX(10deg) rotateY(10deg);
+                    }
+                    &:nth-child(3):hover ~ .outsourcing__card {
+                        transform: perspective(600px) rotateX(-10deg) rotateY(-10deg);
+                    }
+                    &:nth-child(4):hover ~ .outsourcing__card {
+                        transform: perspective(600px) rotateX(-10deg) rotateY(10deg);
+                    }
+                }
+                .outsourcing__card-sharp {
+                    grid-column: 1/2;
+                    grid-row: 1/2;
+                }
+                .outsourcing__card-react {
+                    grid-column: 3/4;
+                    grid-row: 1/2;
+                }
+                .outsourcing__card-mob {
+                    grid-column: 2/3;
+                    grid-row: 2/3;
+                }
+                .outsourcing__card-java {
+                    grid-column: 1/2;
+                    grid-row: 3/4;
+                }
+                .outsourcing__card-php {
+                    grid-column: 2/3;
+                    grid-row: 3/4;
+                }
+                .outsourcing__card-btn {
+                    grid-column: 3/4;
+                    grid-row: 3/4;
+                }
+            }
+        }
+    }
+    .seo {
+        margin-bottom: 100px;
+        max-width: 1148px;
+        margin: 0 auto;
+        .seo__title {
+            margin-bottom: 54px;
+        }
+        .seo__navigate {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 46px;
+            .seo__titles {
+                display: flex;
+                justify-content: start;
+                align-items: center;
+                padding: 8px;
+                background: #000000;
+                border: 1px solid #2A2B3A;
+                border-radius: 8px;
+                .seo__navigate-btn, .seo__navigate-btn--active {
+                    background: transparent;
+                    border: 1px solid transparent;
+                    border-radius: 4px;
+                    padding: 12px 16px;
+                    text-align: center;
+                    font-size: 14px;
+                    line-height: 20px;
+                    margin-right: 16px;
+                    color: #9E9EAC;
+                    cursor: pointer;
+                }
+                .seo__navigate-btn--active {
+                    background: #2A2B3A;
+                    border: 1px solid #2A2B3A;
+                    color: #FFFFFF;
+                }
+            }
+            .seo__icons {
+                button {
+                    background: #000000;
+                    border: 1px solid #2A2B3A;
+                    box-shadow: 0px 1px 2px rgba(16, 24, 40, 0.05);
+                    border-radius: 8px;
+                    padding: 13px 19px;
+                    cursor: pointer;
+                    .seo__icons-img {}
+                }
+                button + button {
+                    margin-left: 8px;
+                }
+            }
+        }
+        .seo__row {
+            .seo__card {
+                .seo__card-header {
+                    .seo__card-header-left {
+
+                    }
+                }
+            }
+        }
     }
 }
 
@@ -165,7 +449,19 @@
     .footer__container-down {
         border-top: 1px solid #3C3D4C;
         padding: 30px 0;
-        max-width: 1148px;
-        margin: 0 auto;
+        .footer__terms-list {
+            max-width: 1148px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: start;
+            align-items: center;
+            .footer__terms-item {
+                font-size: 12px;
+                letter-spacing: -0.01em;
+            }
+            .footer__terms-item + .footer__terms-item {
+                margin-left: 16px;
+            }
+        }
     }
 }

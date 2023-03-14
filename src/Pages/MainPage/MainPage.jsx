@@ -25,6 +25,27 @@ import seoIcon1 from '../../assets/svg/seoIcon1.svg';
 import seoIcon2 from '../../assets/svg/seoIcon2.svg';
 import seoIcon3 from '../../assets/svg/seoIcon3.svg';
 import { FiArrowUpRight } from 'react-icons/fi';
+import usaFlag from '../../assets/svg/usa.svg';
+import ukFlag from '../../assets/svg/uk.svg';
+import canadaFlag from '../../assets/svg/canada.svg';
+import usaLine from '../../assets/img/usaLine.png';
+import ukLine from '../../assets/img/ukLine.png';
+import canadaLine from '../../assets/img/canadaLine.png';
+import usaResult from '../../assets/svg/usaResult.svg';
+import ukResult from '../../assets/svg/ukResult.svg';
+import canadaResult from '../../assets/svg/canadaResult.svg';
+import { HiArrowLeft, HiArrowRight } from 'react-icons/hi';
+import facebook from '../../assets/svg/facebook.svg';
+import instagram from '../../assets/svg/inst.svg';
+import linkedIn from '../../assets/svg/linkedIn.svg';
+import telegram from '../../assets/svg/telegram.svg';
+import gitHub from '../../assets/svg/github.svg';
+import designBg from '../../assets/img/designBg.png';
+import designCard1 from '../../assets/img/designCard1.png';
+import designCard2 from '../../assets/img/designCard2.png';
+import designCard3 from '../../assets/img/designCard3.png';
+import designCard4 from '../../assets/img/designCard4.png';
+import designCard5 from '../../assets/img/designCard5.png';
 
 function MainPage() {
 
@@ -210,24 +231,160 @@ function MainPage() {
                         <li className='seo__card'>
                             <div className="seo__card-header">
                                 <div className="seo__card-header-left">
-                                    <img src="" alt="" className='seo__card-flag' />
-                                    <p className='seo__card-country'></p>
+                                    <img src={usaFlag} alt="" className='seo__card-flag' />
+                                    <p className='seo__card-country'>USA</p>
                                     <FiArrowUpRight className='seo__card-arrow' />
                                 </div>
-                                <button className='seo__card-volume-btn'>Volume</button>
+                                <button className='seo__card-volume-btn usa-volume'>Volume</button>
                             </div>
-                            <img src="" alt="" className='seo__graphic-bg' />
                             <div className="seo__card-statistic">
-                                <div className="seo__card-result"></div>
-                                <div className="seo__card-kd"></div>
-                                <div className="seo__card-volume"></div>
+                                <img src={usaLine} alt="" className='seo__graphic-bg' />
+                                <div className="seo__card-result">
+                                    <div className="seo__card-result-img">
+                                        <img src={usaResult} alt="" />
+                                    </div>
+                                    <p className='seo__card-result-title'>Result</p>    
+                                </div>
+                                <div className="seo__card-kd">
+                                    <p className='seo__card-kd-proccent'>55%</p>
+                                    <p className='seo__card-kd-title'>KD</p>
+                                </div>
+                                <div className="seo__card-volume">
+                                    <p className='seo__card-volume-count'>1,2K</p>
+                                    <p className='seo__card-volume-title'>Volume</p>
+                                </div>
                             </div>
-                            <p className='seo__card-text'></p>
-                            <button className='btn-contact'>Contact Us</button>
+                            <p className='seo__card-text'>You have a decent chance of ranking for</p>
+                            <button className='btn-contact seo-btn'>Contact Us</button>
                         </li>
+                        <li className='seo__card'>
+                            <div className="seo__card-header">
+                                <div className="seo__card-header-left">
+                                    <img src={ukFlag} alt="" className='seo__card-flag' />
+                                    <p className='seo__card-country'>UK</p>
+                                    <FiArrowUpRight className='seo__card-arrow' />
+                                </div>
+                                <button className='seo__card-volume-btn uk-volume'>Volume</button>
+                            </div>
+                            <div className="seo__card-statistic">
+                                <img src={ukLine} alt="" className='seo__graphic-bg' />
+                                <div className="seo__card-result">
+                                    <div className="seo__card-result-img">
+                                        <img src={ukResult} alt="" />
+                                    </div>
+                                    <p className='seo__card-result-title'>Result</p>
+                                </div>
+                                <div className="seo__card-kd">
+                                    <p className='seo__card-kd-proccent'>55%</p>
+                                    <p className='seo__card-kd-title'>KD</p>
+                                </div>
+                                <div className="seo__card-volume">
+                                    <p className='seo__card-volume-count'>1,2K</p>
+                                    <p className='seo__card-volume-title'>Volume</p>
+                                </div>
+                            </div>
+                            <p className='seo__card-text'>You have a decent chance of ranking for</p>
+                            <button className='btn-contact seo-btn'>Contact Us</button>
+                        </li>
+                        <li className='seo__card'>
+                            <div className="seo__card-header">
+                                <div className="seo__card-header-left">
+                                    <img src={canadaFlag} alt="" className='seo__card-flag' />
+                                    <p className='seo__card-country'>CAN</p>
+                                    <FiArrowUpRight className='seo__card-arrow' />
+                                </div>
+                                <button className='seo__card-volume-btn canada-volume'>Volume</button>
+                            </div>
+                            <div className="seo__card-statistic">
+                                <img src={canadaLine} alt="" className='seo__graphic-bg' />
+                                <div className="seo__card-result">
+                                    <div className="seo__card-result-img">
+                                        <img src={canadaResult} alt="" />
+                                    </div>
+                                    <p className='seo__card-result-title'>Result</p>
+                                </div>
+                                <div className="seo__card-kd">
+                                    <p className='seo__card-kd-proccent'>55%</p>
+                                    <p className='seo__card-kd-title'>KD</p>
+                                </div>
+                                <div className="seo__card-volume">
+                                    <p className='seo__card-volume-count'>1,2K</p>
+                                    <p className='seo__card-volume-title'>Volume</p>
+                                </div>
+                            </div>
+                            <p className='seo__card-text'>You have a decent chance of ranking for</p>
+                            <button className='btn-contact seo-btn'>Contact Us</button>
+                        </li>
+                    </ul>
+                    <div className="seo__pagination">
+                        <div className="seo__pagination-wrap">
+                            <HiArrowLeft className='seo__pagination-icon'/>
+                        </div>
+                        <div className="seo__pagination-wrap">
+                            <HiArrowRight className='seo__pagination-icon' />
+                        </div>
+                    </div>
+                </section>
+                <section className='design'>
+                    <img src={designBg} alt="" className='design__bg' />
+                    <h2 className='design__title'>Design</h2>
+                    <p className='design__text'>As a full-service UX design agency, we work closely with our clients to define, design and develop transformative user experiences across all platforms and brand’s touchpoints.</p>
+                    <ul className='design__types'>
+                        <li className='design__types-item'>
+                            <FiArrowUpRight className='design__types-arrow'/>
+                            <p>Graphic Design</p>
+                        </li>
+                        <li className='design__types-item'>
+                            <FiArrowUpRight className='design__types-arrow'/>
+                            <p>Branding</p>
+                        </li>
+                        <li className='design__types-item'>
+                            <FiArrowUpRight className='design__types-arrow'/>
+                            <p>Competitor Analysis</p>
+                        </li>
+                        <li className='design__types-item'>
+                            <FiArrowUpRight className='design__types-arrow'/>
+                            <p>Packaging Design</p>
+                        </li>
+                        <li className='design__types-item'>
+                            <FiArrowUpRight className='design__types-arrow'/>
+                            <p>Social Media</p>
+                        </li>
+                        <li className='design__types-item'>
+                            <FiArrowUpRight className='design__types-arrow'/>
+                            <p>Digital Advertising</p>
+                        </li>
+                    </ul>
+                    <ul className='design__list'>
+                        <li className="design__card">
+                            <img src={designCard1} alt="" className='design__card-img' />
+                            <p className='design__card-title'>Product Strategy</p>
+                            <p className='design__card-text'>We help to build your brand’s mission, vision and values while creating your unique identity and position in the market. We love to make people feel something by crafting stories that connect to people’s hearts.</p>
+                        </li>
+                        <li className="design__card">
+                            <img src={designCard2} alt="" className='design__card-img' />
+                            <p className='design__card-title'>Brand Identity</p>
+                            <p className='design__card-text'>We help your brand find its voice and communicate your values to inspire customers to choose you, by creating a unique identity for you which helps you stand out from the crowd. </p>
+                        </li>
+                        <li className="design__card">
+                            <img src={designCard3} alt="" className='design__card-img' />
+                            <p className='design__card-title'>UI/UX Design</p>
+                            <p className='design__card-text'>Boost your brand awareness and customer loyalties, increase product revenues and conversion rates with the implementation of user experience and user interface design.</p>
+                        </li>
+                        <li className="design__card">
+                            <img src={designCard4} alt="" className='design__card-img' />
+                            <p className='design__card-title'>Prototype</p>
+                            <p className='design__card-text'>We help your brand find its voice and communicate your values to inspire customers to choose you, by creating a unique identity for you which helps you stand out from the crowd. </p>
+                        </li>
+{/*                         <li className="design__card">
+                            <img src={designCard5} alt="" className='design__card-img' />
+                            <p className='design__card-title'>Web Design</p>
+                            <p className='design__card-text'>The process of planning and building the elements of the website. Creation of the overall visual appearance of the website.</p>
+                        </li> */}
                     </ul>
                 </section>
             </main>
+
             <footer className='footer'>
                 <div className="footer__content">
                     <div className="footer__logo">
@@ -253,7 +410,23 @@ function MainPage() {
                     </div>
                     <div className="footer__folow">
                         <p className='footer__folow-title'>Follow Us</p>
-                        <ul className='footer__folow-list'></ul>
+                        <ul className='footer__folow-list'>
+                            <li className='footer__folow-item'>
+                                <img src={facebook} alt="" className='footer__folow-img' />
+                            </li>
+                            <li className='footer__folow-item'>
+                                <img src={instagram} alt="" className='footer__folow-img' />
+                            </li>
+                            <li className='footer__folow-item'>
+                                <img src={linkedIn} alt="" className='footer__folow-img' />
+                            </li>
+                            <li className='footer__folow-item'>
+                                <img src={telegram} alt="" className='footer__folow-img' />
+                            </li>
+                            <li className='footer__folow-item'>
+                                <img src={gitHub} alt="" className='footer__folow-img' />
+                            </li>
+                        </ul>
                     </div>
                 </div>
                 <div className="footer__container-down">

@@ -45,7 +45,16 @@ import designCard1 from '../../assets/img/designCard1.png';
 import designCard2 from '../../assets/img/designCard2.png';
 import designCard3 from '../../assets/img/designCard3.png';
 import designCard4 from '../../assets/img/designCard4.png';
-import designCard5 from '../../assets/img/designCard5.png';
+import user from '../../assets/svg/user.svg';
+import blocknot from '../../assets/svg/blaknot.svg';
+import rocket from '../../assets/svg/rocket.svg';
+import circleIcon1 from '../../assets/svg/facebookPurple.svg';
+import circleIcon2 from '../../assets/svg/ELEMENTS.svg';
+import circleIcon3 from '../../assets/svg/telegaPurple.svg';
+import circleIcon4 from '../../assets/svg/Subtract.svg';
+import circleIcon5 from '../../assets/svg/Group 9.svg';
+import circleIcon6 from '../../assets/svg/Group 81.svg';
+import circleIcon7 from '../../assets/svg/isntPurple.svg';
 
 function MainPage() {
 
@@ -382,6 +391,75 @@ function MainPage() {
                             <p className='design__card-text'>The process of planning and building the elements of the website. Creation of the overall visual appearance of the website.</p>
                         </li> */}
                     </ul>
+                </section>
+                <section className='scheme'>
+                    <h2 className='scheme__title'>Scheme of Work</h2>
+                    <div className="scheme__content">
+                        <div className="scheme__list">
+                            <div className="scheme__row-icons">
+                                <div className="scheme__row-icon-wrap">
+                                    <img src={user} alt="" className='scheme__row-icon' />
+                                </div>
+                                <div className='scheme__row-line'></div>
+
+                                <div className="scheme__row-icon-wrap">
+                                    <img src={blocknot} alt="" className='scheme__row-icon' />
+                                </div>
+                                <div className='scheme__row-line'></div>
+
+                                <div className="scheme__row-icon-wrap">
+                                    <img src={rocket} alt="" className='scheme__row-icon' />
+                                </div>
+                            </div>
+                            <ul className='scheme__row-cards'>
+                                <li className='scheme__row-card'>
+                                    <h3 className='scheme__row-title'>Contact us</h3>
+                                    <p className='scheme__row-text'>Fill out the contact form, brifle descride your project or ask us a question</p>
+                                </li>
+                                <li className='scheme__row-card'>
+                                    <h3 className='scheme__row-title'>Discovery call</h3>
+                                    <p className='scheme__row-text'>Andrew - our CEO will arrange a video meeting with you in order to clarify the project assumptions</p>
+                                </li>
+                                <li className='scheme__row-card'>
+                                    <h3 className='scheme__row-title'>Project estimation</h3>
+                                    <p className='scheme__row-text'>On the basis of the collected information, we will prepare an estimate of the costs and  duration of the project</p>
+                                </li>
+                            </ul>
+                        </div>
+                        <div className="scheme__ilustration">
+                            <div className="scheme__ilustration-content">
+                                <div className="scheme__ilustration-circle">
+                                    <div className="scheme__ilustration-logo">
+                                        <img src={logo} alt="" />
+                                    </div>
+                                    <div className="scheme__ilustration-circle-icon scheme__ilustration-icon1">
+                                        <img src={circleIcon1} alt="" />
+                                    </div>
+                                    <div className="scheme__ilustration-circle-icon  scheme__ilustration-icon2">
+                                        <img src={circleIcon2} alt="" />
+                                    </div>
+                                    <div className="scheme__ilustration-circle-icon  scheme__ilustration-icon3">
+                                        <img src={circleIcon3} alt="" />
+                                    </div>
+                                    <div className="scheme__ilustration-circle-icon  scheme__ilustration-icon4">
+                                        <img src={circleIcon4} alt="" />
+                                    </div>
+                                    <div className="scheme__ilustration-circle-icon  scheme__ilustration-icon5">
+                                        <img src={circleIcon5} alt="" />
+                                    </div>
+                                    <div className="scheme__ilustration-circle-icon  scheme__ilustration-icon6">
+                                        <img src={circleIcon6} alt="" />
+                                    </div>
+                                    <div className="scheme__ilustration-circle-icon  scheme__ilustration-icon7">
+                                        <img src={circleIcon7} alt="" />
+                                    </div>
+                                    <div className="scheme__ilustration-circle-icon  scheme__ilustration-icon8">
+                                        <img src={circleIcon1} alt="" />
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </section>
             </main>
 

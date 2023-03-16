@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import logo from '../../assets/svg/lcsItLogo.svg';
 import './mainPage.scss';
 import mainBg from '../../assets/img/sectionBg.png';
@@ -71,7 +71,6 @@ import locationBg from '../../assets/img/locationBg.jpg';
 import poland from '../../assets/svg/poland.svg';
 
 function MainPage() {
-
     return (
         <React.Fragment>
             <header className="header">

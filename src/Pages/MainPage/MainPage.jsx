@@ -62,6 +62,11 @@ import estimation from '../../assets/img/estimation.png';
 import teamSelection from '../../assets/img/teamSelection.png';
 import contract from '../../assets/img/contract.png';
 import payment from '../../assets/img/payment.png';
+import bigCoubes from '../../assets/img/bigCoubes.png';
+import keyboard from '../../assets/img/keyboard.png';
+import miniCoubes from '../../assets/img/miniCoubes.png';
+import teamBg from '../../assets/img/teamBg.png';
+import grid from '../../assets/img/grid.png';
 
 function MainPage() {
 
@@ -464,56 +469,92 @@ function MainPage() {
                                         <img src={circleIcon1} alt="" />
                                     </div>
                                 </div>
-                                <div className="scheme__triangles">
-                                    <div className="scheme__triangle scheme__triangle-mini"></div>
-                                    <div className="scheme__triangle scheme__triangle-mid"></div>
-                                    <div className="scheme__triangle scheme__triangle-big"></div>
-                                </div>
-                                <div className="scheme__recents">
-                                    <p className='scheme__recents-title'>Recents Contacts</p>
-                                    <ul className='scheme__recents-list'>
-                                        <li className='sheme__recents-item'>
-                                            <img src={moonkle} alt="" className='sheme__recents-icon' />
-                                            <div className="sheme__recents-info">
-                                                <p className="sheme__recents-item-name">Moonkle LTD</p>
-                                                <p className="sheme__recents-item-subtitle">Bank - 0987 3422 8756</p>
-                                            </div>
+                                <div className="sheme__cards-wrap">
+                                    <div className="scheme__recents">
+                                        <div className="scheme__triangles">
+                                            <div className="scheme__triangle scheme__triangle-mini"></div>
+                                            <div className="scheme__triangle scheme__triangle-mid"></div>
+                                            <div className="scheme__triangle scheme__triangle-big"></div>
+                                        </div>
+                                        <p className='scheme__recents-title'>Recents Contacts</p>
+                                        <ul className='scheme__recents-list'>
+                                            <li className='sheme__recents-item'>
+                                                <img src={moonkle} alt="" className='sheme__recents-icon' />
+                                                <div className="sheme__recents-info">
+                                                    <p className="sheme__recents-item-name">Moonkle LTD</p>
+                                                    <p className="sheme__recents-item-subtitle">Bank - 0987 3422 8756</p>
+                                                </div>
+                                            </li>
+                                            <li className='sheme__recents-item'>
+                                                <img src={softTech} alt="" className='sheme__recents-icon' />
+                                                <div className="sheme__recents-info">
+                                                    <p className="sheme__recents-item-name">Soft Tech</p>
+                                                    <p className="sheme__recents-item-subtitle">Bank - 0987 3422 8756</p>
+                                                </div>
+                                            </li>
+                                            <li className='sheme__recents-item'>
+                                                <img src={plaid} alt="" className='sheme__recents-icon' />
+                                                <div className="sheme__recents-info">
+                                                    <p className="sheme__recents-item-name">PLAID</p>
+                                                    <p className="sheme__recents-item-subtitle">Bank - 0987 3422 8756</p>
+                                                </div>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <ul className="sheme__plan">
+                                        <div className="scheme__triangles scheme__triangles-plan ">
+                                            <div className="scheme__triangle scheme__triangle-mini"></div>
+                                            <div className="scheme__triangle scheme__triangle-mid"></div>
+                                            <div className="scheme__triangle scheme__triangle-big"></div>
+                                        </div>
+                                        <li className="scheme__plan-item">
+                                            <img src={estimation} alt="" className="scheme__plan-img" />
+                                            <p className='scheme__plan-name'>Estimation</p>
                                         </li>
-                                        <li className='sheme__recents-item'>
-                                            <img src={softTech} alt="" className='sheme__recents-icon' />
-                                            <div className="sheme__recents-info">
-                                                <p className="sheme__recents-item-name">Soft Tech</p>
-                                                <p className="sheme__recents-item-subtitle">Bank - 0987 3422 8756</p>
-                                            </div>
+                                        <li className="scheme__plan-item">
+                                            <img src={teamSelection} alt="" className="scheme__plan-img" />
+                                            <p className='scheme__plan-name'>Team selection</p>
                                         </li>
-                                        <li className='sheme__recents-item'>
-                                            <img src={plaid} alt="" className='sheme__recents-icon' />
-                                            <div className="sheme__recents-info">
-                                                <p className="sheme__recents-item-name">PLAID</p>
-                                                <p className="sheme__recents-item-subtitle">Bank - 0987 3422 8756</p>
-                                            </div>
+                                        <li className="scheme__plan-item">
+                                            <img src={contract} alt="" className="scheme__plan-img" />
+                                            <p className='scheme__plan-name'>Contract</p>
+                                        </li>
+                                        <li className="scheme__plan-item">
+                                            <img src={payment} alt="" className="scheme__plan-img" />
+                                            <p className='scheme__plan-name'>Payment</p>
                                         </li>
                                     </ul>
                                 </div>
-                                <ul className="sheme__plan">
-                                    <li className="scheme__plan-item">
-                                        <img src={estimation} alt="" className="scheme__plan-img" />
-                                        <p className='scheme__plan-name'></p>
-                                    </li>
-                                    <li className="scheme__plan-item">
-                                        <img src={teamSelection} alt="" className="scheme__plan-img" />
-                                        <p className='scheme__plan-name'></p>
-                                    </li>
-                                    <li className="scheme__plan-item">
-                                        <img src={contract} alt="" className="scheme__plan-img" />
-                                        <p className='scheme__plan-name'></p>
-                                    </li>
-                                    <li className="scheme__plan-item">
-                                        <img src={payment} alt="" className="scheme__plan-img" />
-                                        <p className='scheme__plan-name'></p>
-                                    </li>
-                                </ul>
                             </div>
+                        </div>
+                    </div>
+                </section>
+                <section className='business'>
+                    <h2 className='business__title'>Business model</h2>
+                    <div className="business__model">
+                        <div className="business__big-coubes">
+                            <img src={bigCoubes} alt="" />
+                        </div>
+                        <div className="business__keyboard">
+                            <img src={keyboard} alt="" />
+                        </div>
+                        <div className="business__cards">
+                            <div className="business__outstaffing">
+                                <img src={gitIcon} alt="" className='business__outstaffing-icon' />
+                                <h4 className='business__outstaffing-title'>Outstaffing</h4>
+                            </div>
+                            <div className="business__team">
+                                <img src={teamBg} alt="" className='business__team-bg' />
+                                <h4 className='business__team-title'>Dedicated Team</h4>
+                            </div>
+                            <div className="business__outsorcing">
+                                <img src={gitIcon} alt="" className='business__outsorcing-icon' />
+                                <h4 className='business__outsorcing-title'>Outsourcing</h4>
+                                <img src={grid} alt="" className='business__outsorcing-bg' />
+                            </div>
+                        </div>
+                        <div className="business__mini-coubes">
+                            <img src={miniCoubes} alt="" />
                         </div>
                     </div>
                 </section>

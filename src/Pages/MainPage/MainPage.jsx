@@ -69,6 +69,9 @@ import teamBg from '../../assets/img/teamBg.png';
 import grid from '../../assets/img/grid.png';
 import locationBg from '../../assets/img/locationBg.jpg';
 import poland from '../../assets/svg/poland.svg';
+import locationLocation from '../../assets/svg/locationLocation.svg';
+import locationMain from '../../assets/svg/locationMain.svg';
+import locationPhone from '../../assets/svg/locationPhone.svg';
 
 function MainPage() {
     return (
@@ -575,15 +578,15 @@ function MainPage() {
                         <div className="location__card">
                             <ul>
                                 <li className='location__card-item'>
-                                    <img src="" alt="" className='location__card-icon' />
+                                    <img src={locationPhone} alt="" className='location__card-icon' />
                                     <p className='location__inf'>+44(0)2070 528 406</p>
                                 </li>
                                 <li className='location__card-item'>
-                                    <img src="" alt="" className='location__card-icon' />
+                                    <img src={locationMain} alt="" className='location__card-icon' />
                                     <p className='location__inf'>info@lcs-it.com</p>
                                 </li>
                                 <li className='location__card-item'>
-                                    <img src="" alt="" className='location__card-icon' />
+                                    <img src={locationLocation} alt="" className='location__card-icon' />
                                     <p className='location__inf'>United Kingdom London SW1X 7NE  Knightsbridge Green </p>
                                 </li>
                             </ul>

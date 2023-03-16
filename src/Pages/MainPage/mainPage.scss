@@ -628,6 +628,7 @@ $animationSpeed: 40s;
     .scheme {
         max-width: 1148px;
         margin: 0 auto;
+        margin-bottom: 85px;
         .scheme__title {
             margin-bottom: 118px;
         }
@@ -752,6 +753,34 @@ $animationSpeed: 40s;
                         .scheme__ilustration-icon8 {
                             top: 7px;
                             left: 6px;
+                        }
+                    }
+                    .scheme__triangles {
+                        display: flex;
+                        flex-direction: column;
+                        align-items: center;
+                        justify-content: center;
+                        .scheme__triangle {
+                            width: 0;
+                            height: 0;
+                            border-radius: 10px;
+                        }
+                        .scheme__triangle-mini {
+                            border-left: 17px solid transparent;
+                            border-right: 17px solid transparent;
+                            border-top: 18px solid #171D29;
+                            margin-bottom: 10px;
+                        }
+                        .scheme__triangle-mid {
+                            border-left: 19px solid transparent;
+                            border-right: 19px solid transparent;
+                            border-top: 19px solid #2A2B3A;
+                            margin-bottom: 7px;
+                        }
+                        .scheme__triangle-big {
+                            border-left: 23px solid transparent;
+                            border-right: 23px solid transparent;
+                            border-top: 24px solid #4D4F6C;
                         }
                     }
                 }

@@ -1,7 +1,7 @@
 export const ROUTES = {
-    homePage: '/home',
+    homePage: '/',
 }
 
 export const PATH = {
-    homePage: '/home',
+    homePage: '/',
 }

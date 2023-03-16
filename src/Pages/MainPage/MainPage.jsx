@@ -55,6 +55,9 @@ import circleIcon4 from '../../assets/svg/Subtract.svg';
 import circleIcon5 from '../../assets/svg/Group 9.svg';
 import circleIcon6 from '../../assets/svg/Group 81.svg';
 import circleIcon7 from '../../assets/svg/isntPurple.svg';
+import moonkle from '../../assets/svg/moonkle.svg';
+import softTech from '../../assets/svg/softTech.svg';
+import plaid from '../../assets/svg/plaid.svg';
 
 function MainPage() {
 
@@ -456,6 +459,37 @@ function MainPage() {
                                     <div className="scheme__ilustration-circle-icon  scheme__ilustration-icon8">
                                         <img src={circleIcon1} alt="" />
                                     </div>
+                                </div>
+                                <div className="scheme__triangles">
+                                    <div className="scheme__triangle scheme__triangle-mini"></div>
+                                    <div className="scheme__triangle scheme__triangle-mid"></div>
+                                    <div className="scheme__triangle scheme__triangle-big"></div>
+                                </div>
+                                <div className="scheme__recents">
+                                    <p className='scheme__recents-title'>Recents Contacts</p>
+                                    <ul className='scheme__recents-list'>
+                                        <li className='sheme__recents-item'>
+                                            <img src={moonkle} alt="" className='sheme__recents-icon' />
+                                            <div className="sheme__recents-info">
+                                                <p className="sheme__recents-item-name">Moonkle LTD</p>
+                                                <p className="sheme__recents-item-subtitle">Bank - 0987 3422 8756</p>
+                                            </div>
+                                        </li>
+                                        <li className='sheme__recents-item'>
+                                            <img src={softTech} alt="" className='sheme__recents-icon' />
+                                            <div className="sheme__recents-info">
+                                                <p className="sheme__recents-item-name">Soft Tech</p>
+                                                <p className="sheme__recents-item-subtitle">Bank - 0987 3422 8756</p>
+                                            </div>
+                                        </li>
+                                        <li className='sheme__recents-item'>
+                                            <img src={plaid} alt="" className='sheme__recents-icon' />
+                                            <div className="sheme__recents-info">
+                                                <p className="sheme__recents-item-name">PLAID</p>
+                                                <p className="sheme__recents-item-subtitle">Bank - 0987 3422 8756</p>
+                                            </div>
+                                        </li>
+                                    </ul>
                                 </div>
                             </div>
                         </div>

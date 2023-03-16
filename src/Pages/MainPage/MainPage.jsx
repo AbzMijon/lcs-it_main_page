@@ -101,7 +101,7 @@ function MainPage() {
                         <button className='welcome__btn btn-contact'>Contact Us</button>
                     </div>
                     <div className="welcome__cube">
-                        <div class="cube">
+                        <div className="cube">
                             <canvas id="canvas3d"></canvas>
                         </div>
                     </div>

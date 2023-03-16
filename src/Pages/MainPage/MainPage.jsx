@@ -58,6 +58,10 @@ import circleIcon7 from '../../assets/svg/isntPurple.svg';
 import moonkle from '../../assets/svg/moonkle.svg';
 import softTech from '../../assets/svg/softTech.svg';
 import plaid from '../../assets/svg/plaid.svg';
+import estimation from '../../assets/img/estimation.png';
+import teamSelection from '../../assets/img/teamSelection.png';
+import contract from '../../assets/img/contract.png';
+import payment from '../../assets/img/payment.png';
 
 function MainPage() {
 
@@ -491,6 +495,24 @@ function MainPage() {
                                         </li>
                                     </ul>
                                 </div>
+                                <ul className="sheme__plan">
+                                    <li className="scheme__plan-item">
+                                        <img src={estimation} alt="" className="scheme__plan-img" />
+                                        <p className='scheme__plan-name'></p>
+                                    </li>
+                                    <li className="scheme__plan-item">
+                                        <img src={teamSelection} alt="" className="scheme__plan-img" />
+                                        <p className='scheme__plan-name'></p>
+                                    </li>
+                                    <li className="scheme__plan-item">
+                                        <img src={contract} alt="" className="scheme__plan-img" />
+                                        <p className='scheme__plan-name'></p>
+                                    </li>
+                                    <li className="scheme__plan-item">
+                                        <img src={payment} alt="" className="scheme__plan-img" />
+                                        <p className='scheme__plan-name'></p>
+                                    </li>
+                                </ul>
                             </div>
                         </div>
                     </div>

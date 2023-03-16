@@ -783,6 +783,51 @@ $animationSpeed: 40s;
                             border-top: 24px solid #4D4F6C;
                         }
                     }
+                    .scheme__recents {
+                        padding: 27px 71px 43px 28px;
+                        background: #161B22;
+                        border: 1px solid #2A2B3A;
+                        border-radius: 12px;
+                        .scheme__recents-title {
+                            color: #FFFFFF;
+                            margin-bottom: 30px;
+                            margin-left: 25px;
+                        }
+                        .scheme__recents-list {
+                            display: flex;
+                            flex-direction: column;
+                            align-items: start;
+                            justify-content: center;
+                            .sheme__recents-item {
+                                display: flex;
+                                justify-content: space-between;
+                                align-items: center;
+                                .sheme__recents-icon {
+                                    margin-right: 25px;
+                                    width: 44px;
+                                }
+                                .sheme__recents-info {
+                                    text-align: start;
+                                    .sheme__recents-item-name {
+                                        color: #fff;
+                                        margin-bottom: 5px;
+                                    }
+                                    .sheme__recents-item-subtitle {
+                                        font-weight: 400;
+                                        font-size: 12px;
+                                        line-height: 20px;
+                                        letter-spacing: 0.5px;
+                                        color: #FFFFFF;
+                                        mix-blend-mode: normal;
+                                        opacity: 0.5
+                                    }
+                                }
+                            }
+                            .sheme__recents-item + .sheme__recents-item {
+                                margin-top: 40px;
+                            }
+                        }
+                    }
                 }
             }
         }

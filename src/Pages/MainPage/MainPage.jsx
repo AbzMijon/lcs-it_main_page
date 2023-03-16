@@ -67,6 +67,8 @@ import keyboard from '../../assets/img/keyboard.png';
 import miniCoubes from '../../assets/img/miniCoubes.png';
 import teamBg from '../../assets/img/teamBg.png';
 import grid from '../../assets/img/grid.png';
+import locationBg from '../../assets/img/locationBg.jpg';
+import poland from '../../assets/svg/poland.svg';
 
 function MainPage() {
 
@@ -557,6 +559,41 @@ function MainPage() {
                             <img src={miniCoubes} alt="" />
                         </div>
                     </div>
+                </section>
+                <section className='location'>
+                    <h2 className='location__title'>Our Locations</h2>
+                    <div className="location__content">
+                        <div className="location__selector">
+                            <div className="location__selector-uk location__selector--active">
+                                <img src={ukFlag} alt="" className='location__selector-img' />
+                                <p className='location__selector-name'>United Kingdom</p>
+                            </div>
+                            <div className="location__selector-poland">
+                                <img src={poland} alt="" className='location__selector-img' />
+                                <p className='location__selector-name'>Poland</p>
+                            </div>
+                        </div>
+                        <div className="location__card">
+                            <ul>
+                                <li className='location__card-item'>
+                                    <img src="" alt="" className='location__card-icon' />
+                                    <p className='location__inf'>+44(0)2070 528 406</p>
+                                </li>
+                                <li className='location__card-item'>
+                                    <img src="" alt="" className='location__card-icon' />
+                                    <p className='location__inf'>info@lcs-it.com</p>
+                                </li>
+                                <li className='location__card-item'>
+                                    <img src="" alt="" className='location__card-icon' />
+                                    <p className='location__inf'>United Kingdom London SW1X 7NE  Knightsbridge Green </p>
+                                </li>
+                            </ul>
+                            <div className="location__btn">
+                                <button className='btn-contact'>Contact us</button>
+                            </div>
+                        </div>
+                    </div>
+                    <img src={locationBg} alt="" className='location__bg' />
                 </section>
             </main>
 

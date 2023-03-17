@@ -168,48 +168,112 @@ $animationSpeed: 40s;
                 margin-bottom: 89px;
             }
         }
-        .experience__swiper {
-            height: 100px;
-            margin: auto;
-            overflow:hidden;
-            position: relative;
-            width: 100%;
-            
-            &::before,
-            &::after {
-                content: "";
-                height: 100px;
-                position: absolute;
-                width: 200px;
-                z-index: 2;
-            }
-            
-            &::after {
-                right: 0;
-                top: 0;
-                transform: rotateZ(180deg);
-            }
-        
-            &::before {
-                left: 0;
-                top: 0;
-            }
-            .experience__skills {
-                animation: scroll $animationSpeed linear infinite;
-                display: flex;
                 .experience__skills-card {
                     display: flex;
                     justify-content: center;
                     align-items: center;
+                    width: 70px;
+                    height: 70px;
+                    white-space: nowrap;
+                    margin-right: 70px;
                     .experience__skills-img {
                         margin-right: 25px;
                     }
-                    .experience__skills-name {
-    
+        }
+    }
+    .development {
+        margin-bottom: 52px;
+        .development__title {
+            margin-bottom: 54px;
+        }
+        .development__code {
+            .development__blocks-developers {
+                background: #161B22;
+                border: 1px solid #2A2B3A;
+                border-radius: 12px;
+                padding: 11px 13px 20px 11px;
+                width: 226px;
+                .development__developers-head {
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;
+                    .development__developers-title {
+                        font-weight: 500;
+                        font-size: 12px;
+                        line-height: 18px;
+                        color: #FFFFFF;
+                    }
+                    .development__developers-all {
+                        font-size: 8.77917px;
+                        line-height: 13px;
+                        color: #9747FF;
                     }
                 }
-                .experience__skills-card + .experience__skills-card {
-                    margin-left: 90px;
+                .development__developers-list {
+                    .development__developers-item {
+                        display: flex;
+                        justify-content: space-between;
+                        align-items: center;
+                        padding: 10px 0;
+                        border-top: 0.627083px solid #383838;
+                        &:first-child {
+                            border-top: none;
+                        }
+                        .development__developers-main-inf {
+                            display: flex;
+                            justify-content: space-between;
+                            align-items: center;
+                            .development__developers-avatar {
+                                width: 26px;
+                                height: 26px;
+                                margin-right: 9px;
+                            }
+                            .transfer-from {
+                                border-radius: 50%;
+                            }
+                            .development__developers-inf {
+                                .development__developers-transfers {
+                                    margin-bottom: 4px;
+                                    font-size: 7.525px;
+                                    line-height: 11px;
+                                    letter-spacing: -0.02em;
+                                    color: #9E9EAC;
+                                }
+                                .development__developers-name {
+                                    font-weight: 500;
+                                    font-size: 8.77917px;
+                                    line-height: 13px;
+                                    letter-spacing: -0.02em;
+                                    color: #FFFFFF;
+                                }
+                            }
+                        }
+                        .development__developers-position, .development__developers-mooney {
+                            font-weight: 500;
+                            font-size: 8.77917px;
+                            line-height: 13px;
+                            text-align: right;
+                            letter-spacing: -0.02em;
+                            color: #9747FF;
+                        }
+                        .development__developers-mooney {
+                            color: #F015B0;
+                        }
+                    }
+                }
+            }
+        }
+        .development__keyboard {
+            display: flex;
+            justify-content: start;
+            align-items: center;
+            .development__keyboard-info {
+                margin-left: 23px;
+                .development__keyboard-text {
+                    max-width: 466px;
+                    text-align: start;
+                    margin-bottom: 27px;
+                    color: #E0E0E2;
                 }
             }
         }
@@ -592,12 +656,6 @@ $animationSpeed: 40s;
                 }
             }
         }
-        .design__list {
-            display: flex;
-            justify-content: start;
-            align-items: center;
-            flex-wrap: nowrap;
-            overflow-x: hidden;
             .design__card {
                 border-radius: 30px;
                 background: linear-gradient(140.55deg, rgba(42, 43, 58, 0.6) 1.17%, rgba(9, 11, 12, 0.6) 79.03%);
@@ -623,7 +681,6 @@ $animationSpeed: 40s;
             .design__card + .design__card {
                 margin-left: 30px;
             }
-        }
     }
     .scheme {
         max-width: 1148px;
@@ -1163,5 +1220,20 @@ $animationSpeed: 40s;
                 margin-left: 16px;
             }
         }
+    }
+}
+
+.swiper {
+    gap: 100px;
+    .marquee {
+        gap: 100px;
+        min-width: none;
+    }
+}
+.swiper-design {
+    gap: 30px;
+    .marquee {
+        gap: 30px;
+        min-width: none;
     }
 }

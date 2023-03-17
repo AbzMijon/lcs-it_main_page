@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 import logo from '../../assets/svg/lcsItLogo.svg';
 import './mainPage.scss';
 import mainBg from '../../assets/img/sectionBg.png';
@@ -16,7 +16,7 @@ import experienceCard3 from '../../assets/img/experienceCard3.jpg';
 import outsourcingBg1 from '../../assets/img/moleculaBg1.png';
 import outsourcingBg2 from '../../assets/img/moleculaBg2.png';
 import outsourcingBg3 from '../../assets/img/moleculaBg3.png';
-import outsourcingCard1 from '../../assets/svg/git.svg';
+import outsourcingCard1 from '../../assets/svg/outsorcingCard6.svg';
 import outsourcingCard2 from '../../assets/svg/reactjs.svg';
 import outsourcingCard3 from '../../assets/svg/android.svg';
 import outsourcingCard4 from '../../assets/svg/java.svg';
@@ -72,8 +72,34 @@ import poland from '../../assets/svg/poland.svg';
 import locationLocation from '../../assets/svg/locationLocation.svg';
 import locationMain from '../../assets/svg/locationMain.svg';
 import locationPhone from '../../assets/svg/locationPhone.svg';
+import developmentKeyboard from '../../assets/img/developmentKeyboard.jpg';
+import developers1 from '../../assets/svg/developers1.svg';
+import developers2 from '../../assets/svg/developers2.svg';
+import developers3 from '../../assets/svg/developers3.svg';
+import developers4 from '../../assets/svg/developers4.svg';
+import Marquee from "react-fast-marquee";
+
+import SyntaxHighlighter from 'react-syntax-highlighter';
+import { atomOneDark } from 'react-syntax-highlighter/dist/esm/styles/hljs';
 
 function MainPage() {
+
+    const codeElem = `         <!DOCTYPE html> 
+            <html lang="en">  
+                <head>   
+                    <meta charset="UTF-8">    
+                    <meta name="viewport" content="width=device-width, initial-scale=1.0">     
+                    <meta http-equiv="X-UA-Compatible" content="ie=edge">7      
+                    <title>My Website</title>       
+                    <link rel="stylesheet" href="./style.css">       
+                    <link rel="icon" href="./favicon.ico" type="image/x-icon">      
+                </head>     
+                <body>    
+                    <main>   
+                        <h1>Welcome to My Website</h1>    
+                    </main>
+                    <script src="index.js"></script>
+                </body>`
     return (
         <React.Fragment>
             <header className="header">
@@ -129,37 +155,168 @@ function MainPage() {
                         </ul>
                         <p className='experience__text'>LCS-IT is a modern and creative IT company, where products of any complexityand scale are created! Our team consists of only experienced developers,designers, and friendly managers who implement all your bold ideas using thelatest technology. We implement, maintain, and service. We provide an On-Demand Developers service. On call 24/7.</p>
                     </div>
-                    <div className="experience__swiper">
-                        <ul className='experience__skills'>
-                            <li className='experience__skills-card'>
-                                <img src={cssIcon} alt="" className='experience__skills-img' />
-                                <h5 className='experience__skills-name'>CSS 3</h5>
-                            </li>
-                            <li className='experience__skills-card'>
-                                <img src={figmaIcon} alt="" className='experience__skills-img' />
-                                <h5 className='experience__skills-name'>Figma</h5>
-                            </li>
-                            <li className='experience__skills-card'>
-                                <img src={gitIcon} alt="" className='experience__skills-img' />
-                                <h5 className='experience__skills-name'>Git</h5>
-                            </li>
-                            <li className='experience__skills-card'>
-                                <img src={mssqlIcon} alt="" className='experience__skills-img' />
-                                <h5 className='experience__skills-name'>MSSQL</h5>
-                            </li>
-                            <li className='experience__skills-card'>
-                                <img src={pgsqlIcon} alt="" className='experience__skills-img' />
-                                <h5 className='experience__skills-name'>PostgreSQL</h5>
-                            </li>
-                            <li className='experience__skills-card'>
-                                <img src={mongoIcon} alt="" className='experience__skills-img' />
-                                <h5 className='experience__skills-name'>MongoDB</h5>
-                            </li>
-                            <li className='experience__skills-card'>
-                                <img src={nestIcon} alt="" className='experience__skills-img' />
-                                <h5 className='experience__skills-name'>Nest.Js</h5>
-                            </li>
-                        </ul>
+                    <Marquee
+                        delay={0}
+                        speed={30}
+                        loop={0}
+                        gradient={false}
+                        className='swiper'
+                    >
+                        <div className='experience__skills-card'>
+                            <img src={cssIcon} alt="" className='experience__skills-img' />
+                            <h5 className='experience__skills-name'>CSS 3</h5>
+                        </div>
+                        <div className='experience__skills-card'>
+                            <img src={figmaIcon} alt="" className='experience__skills-img' />
+                            <h5 className='experience__skills-name'>Figma</h5>
+                        </div>
+                        <div className='experience__skills-card'>
+                            <img src={gitIcon} alt="" className='experience__skills-img' />
+                            <h5 className='experience__skills-name'>Git</h5>
+                        </div>
+                        <div className='experience__skills-card'>
+                            <img src={mssqlIcon} alt="" className='experience__skills-img' />
+                            <h5 className='experience__skills-name'>MSSQL</h5>
+                        </div>
+                        <div className='experience__skills-card'>
+                            <img src={pgsqlIcon} alt="" className='experience__skills-img' />
+                            <h5 className='experience__skills-name'>PostgreSQL</h5>
+                        </div>
+                        <div className='experience__skills-card'>
+                            <img src={mongoIcon} alt="" className='experience__skills-img' />
+                            <h5 className='experience__skills-name'>MongoDB</h5>
+                        </div>
+                        <div className='experience__skills-card'>
+                            <img src={nestIcon} alt="" className='experience__skills-img' />
+                            <h5 className='experience__skills-name'>Nest.Js</h5>
+                        </div>
+                        <div className='experience__skills-card'>
+                            <img src={cssIcon} alt="" className='experience__skills-img' />
+                            <h5 className='experience__skills-name'>CSS 3</h5>
+                        </div>
+                        <div className='experience__skills-card'>
+                            <img src={figmaIcon} alt="" className='experience__skills-img' />
+                            <h5 className='experience__skills-name'>Figma</h5>
+                        </div>
+                        <div className='experience__skills-card'>
+                            <img src={gitIcon} alt="" className='experience__skills-img' />
+                            <h5 className='experience__skills-name'>Git</h5>
+                        </div>
+                        <div className='experience__skills-card'>
+                            <img src={mssqlIcon} alt="" className='experience__skills-img' />
+                            <h5 className='experience__skills-name'>MSSQL</h5>
+                        </div>
+                        <div className='experience__skills-card'>
+                            <img src={pgsqlIcon} alt="" className='experience__skills-img' />
+                            <h5 className='experience__skills-name'>PostgreSQL</h5>
+                        </div>
+                        <div className='experience__skills-card'>
+                            <img src={mongoIcon} alt="" className='experience__skills-img' />
+                            <h5 className='experience__skills-name'>MongoDB</h5>
+                        </div>
+                        <div className='experience__skills-card'>
+                            <img src={nestIcon} alt="" className='experience__skills-img' />
+                            <h5 className='experience__skills-name'>Nest.Js</h5>
+                        </div>
+                        <div className='experience__skills-card'>
+                            <img src={cssIcon} alt="" className='experience__skills-img' />
+                            <h5 className='experience__skills-name'>CSS 3</h5>
+                        </div>
+                        <div className='experience__skills-card'>
+                            <img src={figmaIcon} alt="" className='experience__skills-img' />
+                            <h5 className='experience__skills-name'>Figma</h5>
+                        </div>
+                        <div className='experience__skills-card'>
+                            <img src={gitIcon} alt="" className='experience__skills-img' />
+                            <h5 className='experience__skills-name'>Git</h5>
+                        </div>
+                        <div className='experience__skills-card'>
+                            <img src={mssqlIcon} alt="" className='experience__skills-img' />
+                            <h5 className='experience__skills-name'>MSSQL</h5>
+                        </div>
+                        <div className='experience__skills-card'>
+                            <img src={pgsqlIcon} alt="" className='experience__skills-img' />
+                            <h5 className='experience__skills-name'>PostgreSQL</h5>
+                        </div>
+                        <div className='experience__skills-card'>
+                            <img src={mongoIcon} alt="" className='experience__skills-img' />
+                            <h5 className='experience__skills-name'>MongoDB</h5>
+                        </div>
+                        <div className='experience__skills-card'>
+                            <img src={nestIcon} alt="" className='experience__skills-img' />
+                            <h5 className='experience__skills-name'>Nest.Js</h5>
+                        </div>
+                    </Marquee>
+                </section>
+                <section className='development'>
+                    <h2 className='development__title'>Software development</h2>
+                    <div className="development__code">
+                        <div className="development__blocks">
+                            <div className="development__blocks-overview"></div>
+                            <div className="development__blocks-code">
+                                <SyntaxHighlighter language="hmtl" style={atomOneDark} showLineNumbers showInlineLineNumbers>
+                                    {codeElem}
+                                </SyntaxHighlighter>
+                            </div>
+                            <div className="development__blocks-activityAndDevelopers">
+                                <div className="development__blocks-activity"></div>
+                                <div className="development__blocks-developers">
+                                    <div className="development__developers-head">
+                                        <p className='development__developers-title'>Developers</p>
+                                        <p className='development__developers-all'>See all</p>
+                                    </div>
+                                    <ul className='development__developers-list'>
+                                        <li className='development__developers-item'>
+                                            <div className="development__developers-main-inf">
+                                                <img src={developers1} alt="" className='development__developers-avatar transfer-from' />
+                                                <div className="development__developers-inf">
+                                                    <p className='development__developers-transfers'>Tranfers from</p>
+                                                    <p className='development__developers-name'>Matheus Ferrero</p>
+                                                </div>
+                                            </div>
+                                            <p className='development__developers-position'>Junior</p>
+                                        </li>
+                                        <li className='development__developers-item'>
+                                            <div className="development__developers-main-inf">
+                                                <img src={developers2} alt="" className='development__developers-avatar' />
+                                                <div className="development__developers-inf">
+                                                    <p className='development__developers-transfers'>Tranfers to</p>
+                                                    <p className='development__developers-name'>Floyd Miles</p>
+                                                </div>
+                                            </div>
+                                            <p className='development__developers-mooney'>-$39.65</p>
+                                        </li>
+                                        <li className='development__developers-item'>
+                                            <div className="development__developers-main-inf">
+                                                <img src={developers3} alt="" className='development__developers-avatar' />
+                                                <div className="development__developers-inf">
+                                                    <p className='development__developers-transfers'>Tranfers to</p>
+                                                    <p className='development__developers-name'>Jerome Bell</p>
+                                                </div>
+                                            </div>
+                                            <p className='development__developers-mooney'>-$29.78</p>
+                                        </li>
+                                        <li className='development__developers-item'>
+                                            <div className="development__developers-main-inf">
+                                                <img src={developers4} alt="" className='development__developers-avatar' />
+                                                <div className="development__developers-inf">
+                                                    <p className='development__developers-transfers'>Tranfers to</p>
+                                                    <p className='development__developers-name'>Ralph Edwards</p>
+                                                </div>
+                                            </div>
+                                            <p className='development__developers-mooney'>-$46.61</p>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div className="development__keyboard">
+                            <img src={developmentKeyboard} alt="" />
+                            <div className="development__keyboard-info">
+                                <p className="development__keyboard-text">We design new experience from physical and digital products and the company overall. We create brands that are attached to people, new, useful and unique products.</p>
+                                <button className='btn-contact'>Contact Us</button>
+                            </div>
+                        </div>
                     </div>
                 </section>
                 <section className='outsourcing'>
@@ -380,33 +537,39 @@ function MainPage() {
                             <p>Digital Advertising</p>
                         </li>
                     </ul>
-                    <ul className='design__list'>
-                        <li className="design__card">
+                    <Marquee
+                        delay={0}
+                        speed={30}
+                        loop={0}
+                        gradient={false}
+                        className='swiper-design'
+                    >
+                        <div className="design__card">
                             <img src={designCard1} alt="" className='design__card-img' />
                             <p className='design__card-title'>Product Strategy</p>
                             <p className='design__card-text'>We help to build your brand’s mission, vision and values while creating your unique identity and position in the market. We love to make people feel something by crafting stories that connect to people’s hearts.</p>
-                        </li>
-                        <li className="design__card">
+                        </div>
+                        <div className="design__card">
                             <img src={designCard2} alt="" className='design__card-img' />
                             <p className='design__card-title'>Brand Identity</p>
                             <p className='design__card-text'>We help your brand find its voice and communicate your values to inspire customers to choose you, by creating a unique identity for you which helps you stand out from the crowd. </p>
-                        </li>
-                        <li className="design__card">
+                        </div>
+                        <div className="design__card">
                             <img src={designCard3} alt="" className='design__card-img' />
                             <p className='design__card-title'>UI/UX Design</p>
                             <p className='design__card-text'>Boost your brand awareness and customer loyalties, increase product revenues and conversion rates with the implementation of user experience and user interface design.</p>
-                        </li>
-                        <li className="design__card">
+                        </div>
+                        <div className="design__card">
                             <img src={designCard4} alt="" className='design__card-img' />
                             <p className='design__card-title'>Prototype</p>
                             <p className='design__card-text'>We help your brand find its voice and communicate your values to inspire customers to choose you, by creating a unique identity for you which helps you stand out from the crowd. </p>
-                        </li>
-{/*                         <li className="design__card">
-                            <img src={designCard5} alt="" className='design__card-img' />
+                        </div>
+                        <div className="design__card">
+                            <img src={designCard3} alt="" className='design__card-img' />
                             <p className='design__card-title'>Web Design</p>
                             <p className='design__card-text'>The process of planning and building the elements of the website. Creation of the overall visual appearance of the website.</p>
-                        </li> */}
-                    </ul>
+                        </div>
+                    </Marquee>
                 </section>
                 <section className='scheme'>
                     <h2 className='scheme__title'>Scheme of Work</h2>
@@ -544,7 +707,7 @@ function MainPage() {
                         </div>
                         <div className="business__cards">
                             <div className="business__outstaffing">
-                                <img src={gitIcon} alt="" className='business__outstaffing-icon' />
+                                <img src={outsourcingCard1} alt="" className='business__outstaffing-icon' />
                                 <h4 className='business__outstaffing-title'>Outstaffing</h4>
                             </div>
                             <div className="business__team">
@@ -552,7 +715,7 @@ function MainPage() {
                                 <h4 className='business__team-title'>Dedicated Team</h4>
                             </div>
                             <div className="business__outsorcing">
-                                <img src={gitIcon} alt="" className='business__outsorcing-icon' />
+                                <img src={outsourcingCard1} alt="" className='business__outsorcing-icon' />
                                 <h4 className='business__outsorcing-title'>Outsourcing</h4>
                                 <img src={grid} alt="" className='business__outsorcing-bg' />
                             </div>

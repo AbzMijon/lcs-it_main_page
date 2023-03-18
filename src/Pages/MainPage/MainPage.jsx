@@ -78,28 +78,76 @@ import developers2 from '../../assets/svg/developers2.svg';
 import developers3 from '../../assets/svg/developers3.svg';
 import developers4 from '../../assets/svg/developers4.svg';
 import Marquee from "react-fast-marquee";
-
 import SyntaxHighlighter from 'react-syntax-highlighter';
 import { atomOneDark } from 'react-syntax-highlighter/dist/esm/styles/hljs';
+import searchIcon from '../../assets/svg/search-normal.svg';
+import designCard2Hover from '../../assets/img/designCard2Hover.png';
 
 function MainPage() {
 
-    const codeElem = `         <!DOCTYPE html> 
-            <html lang="en">  
-                <head>   
-                    <meta charset="UTF-8">    
-                    <meta name="viewport" content="width=device-width, initial-scale=1.0">     
-                    <meta http-equiv="X-UA-Compatible" content="ie=edge">7      
-                    <title>My Website</title>       
-                    <link rel="stylesheet" href="./style.css">       
-                    <link rel="icon" href="./favicon.ico" type="image/x-icon">      
-                </head>     
-                <body>    
-                    <main>   
-                        <h1>Welcome to My Website</h1>    
-                    </main>
-                    <script src="index.js"></script>
-                </body>`
+/*     useEffect(() => {
+        let mouse = {
+            X   : 0,
+            Y   : 0 - 600,
+            CX  : 0,
+            CY  : 0
+        };
+        
+        let box = document.getElementById('experience__list');
+        
+        let card = document.createElement('div');
+        card.className = 'card';
+        
+        card.innerHTML = '<h2>Hover Me</h2><p>Weelcome to updated card effect</p>';
+        
+        let light = document.createElement('div');
+        light.className = 'light';
+        
+        box.appendChild(card);
+        card.appendChild(light);
+        
+        document.body.onmousemove = function(e) 
+        {
+            mouse.X = (e.clientX - card.offsetLeft) ;
+            mouse.Y = (e.clientY - card.offsetTop);
+        };
+        
+        function step(timestamp) 
+        {
+            let targetY = mouse.Y;
+            let dy = targetY - mouse.CY;
+            mouse.CY += dy * 0.05;
+        
+            let targetX = mouse.X;
+            let dx = targetX - mouse.CX;
+            mouse.CX += dx * 0.05;
+            
+            light.style.background = 'radial-gradient(circle at ' + mouse.CX + 'px ' + mouse.CY + 'px, #fff, transparent)';
+        
+            requestAnimationFrame(step);
+        }
+        
+        requestAnimationFrame(step);
+    }, []) */
+
+
+
+    const codeElem = `<!DOCTYPE html> 
+    <html lang="en">  
+      <head>   
+         <meta charset="UTF-8">    
+         <meta name="viewport" content="width=device-width, initial-scale=1.0">     
+         <meta http-equiv="X-UA-Compatible" content="ie=edge">7      
+         <title>My Website</title>       
+         <link rel="stylesheet" href="./style.css">       
+         <link rel="icon" href="./favicon.ico" type="image/x-icon">      
+     </head>     
+        <body>    
+            <main>   
+                <h1>Welcome to My Website</h1>    
+            </main>
+            <script src="index.js"></script>
+        </body>`
     return (
         <React.Fragment>
             <header className="header">
@@ -139,7 +187,8 @@ function MainPage() {
                 <section className='experience'>
                     <div className="experience__block">
                         <h2 className='experience__title'>Tremendous experience</h2>
-                        <ul className='experience__list'>
+                        
+                        <ul className='experience__list' id='experience__list'>
                             <li className='experience__card'>
                                 <img src={experienceCard1} alt="" />
                                 <p className='experience__card-title'>Software development</p>
@@ -153,6 +202,7 @@ function MainPage() {
                                 <p className='experience__card-title'>Design</p>
                             </li>
                         </ul>
+
                         <p className='experience__text'>LCS-IT is a modern and creative IT company, where products of any complexityand scale are created! Our team consists of only experienced developers,designers, and friendly managers who implement all your bold ideas using thelatest technology. We implement, maintain, and service. We provide an On-Demand Developers service. On call 24/7.</p>
                     </div>
                     <Marquee
@@ -254,9 +304,28 @@ function MainPage() {
                         <div className="development__blocks">
                             <div className="development__blocks-overview"></div>
                             <div className="development__blocks-code">
-                                <SyntaxHighlighter language="hmtl" style={atomOneDark} showLineNumbers showInlineLineNumbers>
-                                    {codeElem}
-                                </SyntaxHighlighter>
+                                <div className="development__code-left">
+                                    <img src={logo} alt="" className='development__code-logo' />
+                                </div>
+                                <div className="development__code-head">
+                                    <div className='development__code-stroke'>
+                                        <a href="http://www.lcs-it.com/" className='development__code-str'>http://www.lcs-it.com/</a>
+                                        <img src={searchIcon} alt="" className='development__code-loop' />
+                                    </div>
+                                </div>
+                                <div className="development__code-main">
+                                    <div className="development__code-main-row">
+                                        <button className='development__code-btn development__code-btn--active'>index.html</button>
+                                        <button className='development__code-btn'>script.js</button>
+                                        <button className='development__code-btn'>package.json</button>
+                                    </div>
+{/*                                     <SyntaxHighlighter language="hmtl" style={atomOneDark} showLineNumbers showInlineLineNumbers className='code'>
+                                        {codeElem}
+                                    </SyntaxHighlighter> */}
+                                    <pre className="code__text">
+                                        {codeElem}
+                                    </pre>
+                                </div>
                             </div>
                             <div className="development__blocks-activityAndDevelopers">
                                 <div className="development__blocks-activity"></div>
